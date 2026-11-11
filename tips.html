@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cooking Tips | Breakfast, Brunch & Dinner</title>
+<meta name="description" content="Ten cooking habits that improve every recipe, from salting in stages to resting meat, with the reason each one works.">
+<link rel="canonical" href="https://breakfastbrunchanddinner.com/tips.html">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Raleway:wght@100&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#161616;--grey:#999;--line:#e5e5e5}
+body{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.75;color:#111;background:#fff}
+a{color:var(--grey);text-decoration:none;transition:color .2s}
+a:hover{color:#111}
+h1,h2,h3,h4,.nav-link,.cat,.more,.site-footer .foot-nav a{font-family:'Montserrat',Arial,sans-serif;text-transform:uppercase}
+/* top bar */
+.topbar{background:var(--ink);padding:0}
+.topbar .nav-link{color:#fff;font-size:12px;font-weight:700;letter-spacing:2px;padding:20px 22px 20px 0}
+.topbar .nav-link:hover,.topbar .nav-link.active{color:var(--grey)}
+.topbar .dropdown-menu{background:var(--ink);border:0;border-radius:0;margin-top:0;padding:8px 0}
+.topbar .dropdown-item{color:#fff;font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 20px}
+.topbar .dropdown-item:hover{background:#222;color:var(--grey)}
+.topbar .navbar-toggler{border:0;color:#fff;font-family:'Montserrat',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;padding:18px 0}
+.topbar .partner{color:var(--grey);font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.topbar .partner:hover{color:#fff}
+/* logo */
+.logo{text-align:center;padding:95px 15px 85px}
+.logo a{font-family:'Raleway',Arial,sans-serif;font-weight:100;font-size:clamp(30px,6.2vw,88px);letter-spacing:.04em;text-transform:uppercase;color:#222;line-height:1.1}
+/* featured */
+.featured{height:430px;display:flex;align-items:flex-end;justify-content:center;text-align:center;padding:0 20px 34px;margin-bottom:70px;
+ background:linear-gradient(120deg,#cfd3d6 0%,#e4e6e8 38%,#d7d2d0 62%,#c9ced2 100%)}
+.featured .cat{color:#fff;font-size:11px;font-weight:700;letter-spacing:3px;display:block;margin-bottom:14px}
+.featured h2{font-size:26px;letter-spacing:4px;font-weight:400;margin:0}
+.featured h2 a{color:#fff}
+.featured .rule{background:#fff}
+/* posts */
+.post{max-width:920px;margin:0 auto 70px}
+.post-head{text-align:center;margin-bottom:28px}
+.cat{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--grey);margin:0 6px}
+.post-head h1,.post-head h2{font-size:30px;font-weight:400;letter-spacing:5px;margin:10px 0 0;line-height:1.35}
+.post-head h2 a{color:#000}
+.rule{display:block;width:60px;height:2px;background:#161616;margin:18px auto}
+.date{font-style:italic;color:var(--grey);font-size:17px}
+.post h3{font-size:15px;font-weight:700;letter-spacing:3px;margin:38px 0 12px}
+.post h4{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--grey);margin:22px 0 8px}
+.post ul,.post ol{padding-left:22px}
+.post li{margin-bottom:4px}
+.more-wrap{text-align:center;margin:34px 0 44px}
+.more{font-size:12px;font-weight:700;letter-spacing:4px;color:#000;border-bottom:1px solid #bbb;padding-bottom:12px}
+.post-foot{border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;padding:18px 0;font-family:'Montserrat',Arial,sans-serif;font-size:13px;letter-spacing:1px}
+.partner-box{border:1px solid var(--line);padding:42px 36px;text-align:left}
+.recipe{border-top:1px solid var(--line);padding-top:54px;margin-top:54px}
+.recipe:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.meta{font-style:italic;color:var(--grey)}
+.jump{text-align:center;font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;line-height:2.4;margin-bottom:60px}
+.jump a{margin:0 10px;white-space:nowrap}
+/* footer */
+.site-footer{background:var(--ink);margin-top:40px;text-align:center}
+.foot-nav{padding:36px 15px;border-bottom:1px solid #2a2a2a;max-width:1350px;margin:0 auto}
+.foot-nav a{color:#fff;font-size:13px;font-weight:700;letter-spacing:2px;margin:0 34px;display:inline-block;padding:6px 0}
+.foot-nav a:hover{color:var(--grey)}
+.copy{color:#888;font-size:14px;text-transform:uppercase;padding:38px 15px}
+@media (max-width:767px){
+ .logo{padding:55px 15px 50px}.featured{height:300px;margin-bottom:50px}
+ .post-head h1,.post-head h2{font-size:22px;letter-spacing:3px}
+ .topbar .nav-link{padding:12px 0}.foot-nav a{margin:0 14px}.partner-box{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md topbar sticky-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">&#9776; Menu</button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Food &amp; Drink</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="recipes.html">Recipes</a></li>
+            <li><a class="dropdown-item" href="recipes.html#breakfast">Breakfast</a></li>
+            <li><a class="dropdown-item" href="recipes.html#brunch">Brunch</a></li>
+            <li><a class="dropdown-item" href="recipes.html#dinner">Dinner</a></li>
+            <li><a class="dropdown-item" href="tips.html">Cooking Tips</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lifestyle</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="lifestyle.html">Casual Dining</a></li>
+            <li><a class="dropdown-item" href="lifestyle.html#partner">Our Partner Cafe</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="partner d-none d-md-inline" href="https://sweetpalmcoffee.com">Partner: Sweet Palm Coffee</a>
+    </div>
+  </div>
+</nav>
+
+<header class="logo"><a href="index.html">Breakfast, Brunch &amp; Dinner</a></header>
+
+<main class="container">
+
+<article class="post">
+  <div class="post-head"><span class="cat">Food</span><span class="cat">Tips</span><h1>Ten Cooking Habits That Improve Every Recipe</h1><span class="rule"></span><div class="date">Posted on October 21, 2026</div></div>
+  <p>Recipes tell you what to do. Technique is what makes them turn out. The ten habits below apply to nearly everything on this site, from a two-egg breakfast to a pan of chicken and rice, and each one comes with the reason behind it so you can apply it to recipes from anywhere. None of this is advanced. It is the set of small decisions that separate a meal that worked from one that almost did.</p>
+  <h3>1. Read the recipe to the end before the stove goes on</h3>
+<p>Most kitchen mistakes happen because step four asks for something that should have been started at step one. Read the whole recipe, set out the ingredients, and do the chopping first. Restaurants call this mise en place. At home it simply means you are never mincing garlic while the butter burns. Five minutes of setup saves more time than any shortcut inside the recipe itself.</p><h3>2. Salt in stages, not all at the end</h3>
+<p>Salt added at the end sits on the surface of food. Salt added during cooking seasons it all the way through. Add a pinch when the onions go in, another when the liquid goes in, and taste before serving. Pasta water should be salty enough to notice. Meat benefits from salting at least thirty minutes ahead, which also dries the surface so it browns better.</p><h3>3. Give the pan time to heat</h3>
+<p>A pan that is not hot enough steams food instead of browning it. Let a skillet heat for two full minutes over medium to medium-high before adding oil, then let the oil shimmer before adding food. The exception is eggs, which want gentle heat from start to finish. If food sticks to a stainless pan, it usually went in too early or was moved too soon.</p><h3>4. Leave space in the pan</h3>
+<p>Crowding is the most common reason vegetables turn soft and chicken turns grey. Every piece of food releases moisture, and when pieces touch, that moisture has nowhere to go. Leave a finger-width gap between pieces, and cook in two batches if you have to. The same rule applies to sheet pans in the oven. Two half-full pans roast far better than one that is piled high.</p><h3>5. Finish with acid</h3>
+<p>When a dish tastes flat and more salt does not help, it almost always needs acid. A squeeze of lemon, a splash of vinegar, or a spoonful of hot sauce brightens rich food and makes the other flavors easier to taste. This is why our shrimp and grits ends with lemon and our chicken and rice gets a squeeze over the whole pan. Add it off the heat, at the very end.</p><h3>6. Save the pasta water</h3>
+<p>The cloudy water left after boiling pasta is full of starch, and starch is what turns oil, butter, and cheese into a sauce that clings instead of pooling at the bottom of the bowl. Scoop out a cup before you drain. Add it a splash at a time while tossing the pasta in the pan over the heat. You will rarely need the whole cup, but you cannot get it back once it is down the drain.</p><h3>7. Keep a sharp knife and a damp towel</h3>
+<p>A sharp knife is safer than a dull one because it goes where you point it and needs less force. A basic pull-through sharpener used once a month is enough for most home cooks. Put a damp kitchen towel under the cutting board so it cannot slide. These two habits make prep faster and noticeably less tiring, which matters more than any single piece of expensive equipment.</p><h3>8. Pull food early and let it rest</h3>
+<p>Food keeps cooking after it leaves the heat. Scrambled eggs should come off while they still look a little wet, because the pan and their own heat will finish them. Chicken, steak, and pork should rest five to ten minutes before slicing so the juices stay in the meat instead of running onto the board. Pancakes and toast are the exception, and should go straight to the plate.</p><h3>9. Trust a thermometer over a clock</h3>
+<p>Cooking times in any recipe are estimates, because ovens, pans, and the thickness of the food all vary. An instant-read thermometer removes the guessing. Chicken breast is done at 165 degrees, thighs are better at 175, and medium-rare steak is around 130. A reliable thermometer costs less than a single ruined roast and is the one tool we recommend to every new cook.</p><h3>10. Clean as you go</h3>
+<p>A sink full of dishes makes cooking feel like more work than it is. Fill the sink with hot soapy water before you start and drop tools in as you finish with them. Wipe the counter while something simmers. Use the resting time for meat to wash the pan it cooked in. By the time dinner is on the table, the kitchen is mostly clean and the meal ends with a plate, not a chore.</p>
+  <h3>Where to practice</h3>
+  <p>The fastest way to build these habits is to repeat one recipe until it is automatic. The <a href="recipes.html#breakfast-burrito">breakfast burrito</a> teaches gentle heat and timing. The <a href="recipes.html#tomato-pasta">burst cherry tomato pasta</a> teaches pasta water. The <a href="recipes.html#chicken-rice">lemon herb chicken and rice</a> teaches browning, resting, and finishing with acid in a single pan. Cook each one three times and the habits carry over to everything else you make.</p>
+  <div class="more-wrap"><a class="more" href="recipes.html">Go to the Recipes</a></div>
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-nav">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="tips.html">Cooking Tips</a>
+    <a href="lifestyle.html">Lifestyle</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="copy">&copy; 2026 Breakfast, Brunch &amp; Dinner. All rights reserved // Charleston, SC</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

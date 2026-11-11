@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breakfast, Brunch & Dinner | Home Recipes from Charleston, SC</title>
+<meta name="description" content="Simple recipes for breakfast, brunch, and dinner from a Charleston kitchen, plus cooking tips and a local guide to casual dining.">
+<link rel="canonical" href="https://breakfastbrunchanddinner.com/">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Raleway:wght@100&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#161616;--grey:#999;--line:#e5e5e5}
+body{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.75;color:#111;background:#fff}
+a{color:var(--grey);text-decoration:none;transition:color .2s}
+a:hover{color:#111}
+h1,h2,h3,h4,.nav-link,.cat,.more,.site-footer .foot-nav a{font-family:'Montserrat',Arial,sans-serif;text-transform:uppercase}
+/* top bar */
+.topbar{background:var(--ink);padding:0}
+.topbar .nav-link{color:#fff;font-size:12px;font-weight:700;letter-spacing:2px;padding:20px 22px 20px 0}
+.topbar .nav-link:hover,.topbar .nav-link.active{color:var(--grey)}
+.topbar .dropdown-menu{background:var(--ink);border:0;border-radius:0;margin-top:0;padding:8px 0}
+.topbar .dropdown-item{color:#fff;font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 20px}
+.topbar .dropdown-item:hover{background:#222;color:var(--grey)}
+.topbar .navbar-toggler{border:0;color:#fff;font-family:'Montserrat',Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;padding:18px 0}
+.topbar .partner{color:var(--grey);font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.topbar .partner:hover{color:#fff}
+/* logo */
+.logo{text-align:center;padding:95px 15px 85px}
+.logo a{font-family:'Raleway',Arial,sans-serif;font-weight:100;font-size:clamp(30px,6.2vw,88px);letter-spacing:.04em;text-transform:uppercase;color:#222;line-height:1.1}
+/* featured */
+.featured{height:430px;display:flex;align-items:flex-end;justify-content:center;text-align:center;padding:0 20px 34px;margin-bottom:70px;
+ background:linear-gradient(120deg,#cfd3d6 0%,#e4e6e8 38%,#d7d2d0 62%,#c9ced2 100%)}
+.featured .cat{color:#fff;font-size:11px;font-weight:700;letter-spacing:3px;display:block;margin-bottom:14px}
+.featured h2{font-size:26px;letter-spacing:4px;font-weight:400;margin:0}
+.featured h2 a{color:#fff}
+.featured .rule{background:#fff}
+/* posts */
+.post{max-width:920px;margin:0 auto 70px}
+.post-head{text-align:center;margin-bottom:28px}
+.cat{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--grey);margin:0 6px}
+.post-head h1,.post-head h2{font-size:30px;font-weight:400;letter-spacing:5px;margin:10px 0 0;line-height:1.35}
+.post-head h2 a{color:#000}
+.rule{display:block;width:60px;height:2px;background:#161616;margin:18px auto}
+.date{font-style:italic;color:var(--grey);font-size:17px}
+.post h3{font-size:15px;font-weight:700;letter-spacing:3px;margin:38px 0 12px}
+.post h4{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--grey);margin:22px 0 8px}
+.post ul,.post ol{padding-left:22px}
+.post li{margin-bottom:4px}
+.more-wrap{text-align:center;margin:34px 0 44px}
+.more{font-size:12px;font-weight:700;letter-spacing:4px;color:#000;border-bottom:1px solid #bbb;padding-bottom:12px}
+.post-foot{border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;padding:18px 0;font-family:'Montserrat',Arial,sans-serif;font-size:13px;letter-spacing:1px}
+.partner-box{border:1px solid var(--line);padding:42px 36px;text-align:left}
+.recipe{border-top:1px solid var(--line);padding-top:54px;margin-top:54px}
+.recipe:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.meta{font-style:italic;color:var(--grey)}
+.jump{text-align:center;font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;line-height:2.4;margin-bottom:60px}
+.jump a{margin:0 10px;white-space:nowrap}
+/* footer */
+.site-footer{background:var(--ink);margin-top:40px;text-align:center}
+.foot-nav{padding:36px 15px;border-bottom:1px solid #2a2a2a;max-width:1350px;margin:0 auto}
+.foot-nav a{color:#fff;font-size:13px;font-weight:700;letter-spacing:2px;margin:0 34px;display:inline-block;padding:6px 0}
+.foot-nav a:hover{color:var(--grey)}
+.copy{color:#888;font-size:14px;text-transform:uppercase;padding:38px 15px}
+@media (max-width:767px){
+ .logo{padding:55px 15px 50px}.featured{height:300px;margin-bottom:50px}
+ .post-head h1,.post-head h2{font-size:22px;letter-spacing:3px}
+ .topbar .nav-link{padding:12px 0}.foot-nav a{margin:0 14px}.partner-box{padding:28px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md topbar sticky-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">&#9776; Menu</button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Food &amp; Drink</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="recipes.html">Recipes</a></li>
+            <li><a class="dropdown-item" href="recipes.html#breakfast">Breakfast</a></li>
+            <li><a class="dropdown-item" href="recipes.html#brunch">Brunch</a></li>
+            <li><a class="dropdown-item" href="recipes.html#dinner">Dinner</a></li>
+            <li><a class="dropdown-item" href="tips.html">Cooking Tips</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lifestyle</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="lifestyle.html">Casual Dining</a></li>
+            <li><a class="dropdown-item" href="lifestyle.html#partner">Our Partner Cafe</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="partner d-none d-md-inline" href="https://sweetpalmcoffee.com">Partner: Sweet Palm Coffee</a>
+    </div>
+  </div>
+</nav>
+
+<header class="logo"><a href="index.html">Breakfast, Brunch &amp; Dinner</a></header>
+
+<main class="container">
+
+<!-- Featured block: swap the gradient for a photo with style="background:url(images/your-photo.jpg) center/cover" -->
+<section class="featured">
+  <div>
+    <span class="cat">Recipes</span>
+    <h2><a href="recipes.html#breakfast-burrito">Soft-Scrambled Breakfast Burrito</a></h2>
+    <span class="rule"></span>
+  </div>
+</section>
+
+<article class="post">
+  <div class="post-head"><span class="cat">Welcome</span><h1>Recipes for Every Meal of the Day</h1><span class="rule"></span><div class="date">Home cooking from Charleston, South Carolina</div></div>
+  <p>Breakfast, Brunch &amp; Dinner is a recipe site built around the three meals people actually cook at home. Every recipe here uses a short ingredient list, one or two pans, and steps you can follow on a weeknight without reading them twice. We cook out of a small Charleston kitchen, so the food leans Southern and coastal: grits, shrimp, eggs, biscuits, and a lot of lemon.</p>
+  <p>The site is split the way a day is split. Morning recipes are fast and built on eggs. Brunch recipes take a little longer and feed a table. Dinner recipes are one-pan meals that leave very few dishes behind. Alongside the recipes you will find a page of <a href="tips.html">cooking tips</a> that apply to almost anything you make, and a <a href="lifestyle.html">lifestyle page</a> about eating out casually in Charleston the way people who live here do it.</p>
+</article>
+
+<article class="post">
+  <div class="post-head"><span class="cat">Food</span><span class="cat">Recipes</span><h2><a href="recipes.html#breakfast-burrito">Soft-Scrambled Breakfast Burrito</a></h2><span class="rule"></span><div class="date">Posted on November 9, 2026</div></div>
+  <p>A good breakfast burrito comes down to two things: eggs that are still soft when they go into the tortilla, and potatoes that are crisp enough to hold their shape. Most homemade versions fail because the eggs are cooked dry and then steamed again inside the wrap. This one pulls the eggs off the heat early, layers the cheese against the warm tortilla so it melts on contact, and finishes the whole burrito seam-side down in the pan so it stays closed. It takes about twenty-five minutes and it freezes well, which makes it one of the most useful recipes on the site.</p>
+  <div class="more-wrap"><a class="more" href="recipes.html#breakfast-burrito">Continue Reading</a></div>
+</article>
+
+<article class="post">
+  <div class="post-head"><span class="cat">Food</span><span class="cat">Recipes</span><h2><a href="recipes.html#shrimp-grits">Lowcountry Shrimp and Grits</a></h2><span class="rule"></span><div class="date">Posted on November 4, 2026</div></div>
+  <p>Shrimp and grits is the dish Charleston is known for, and it is far easier than its reputation suggests. Stone-ground grits need time and stirring, not skill. The shrimp cook in the same pan as the bacon in under four minutes. A squeeze of lemon and a few dashes of hot sauce pull the pan drippings into a quick sauce. Our version skips the heavy cream and the flour-thickened gravy, so the shrimp stay the point of the plate. Make it for brunch with a table of people, or halve it for a quiet dinner.</p>
+  <div class="more-wrap"><a class="more" href="recipes.html#shrimp-grits">Continue Reading</a></div>
+</article>
+
+<article class="post">
+  <div class="post-head"><span class="cat">Food</span><span class="cat">Recipes</span><h2><a href="recipes.html#chicken-caesar-wrap">Homemade Chicken Caesar Wrap</a></h2><span class="rule"></span><div class="date">Posted on October 28, 2026</div></div>
+  <p>The chicken caesar wrap is a lunch counter classic that turns into an easy dinner at home. The trick is dressing the romaine lightly, slicing the chicken thin, and adding something crunchy so the wrap has texture all the way through. Our dressing is a five-minute shortcut made with mayonnaise, lemon, Dijon, garlic, and parmesan, with no raw egg and no blender. Warm the tortilla before you roll it and it will fold without tearing.</p>
+  <div class="more-wrap"><a class="more" href="recipes.html#chicken-caesar-wrap">Continue Reading</a></div>
+</article>
+
+<article class="post" id="partner">
+  <div class="partner-box">
+    <div class="post-head"><span class="cat">Partner Site</span><h2>Sweet Palm Coffee on King Street</h2><span class="rule"></span><div class="date">471 King Street, Charleston, SC</div></div>
+    <p><a href="https://sweetpalmcoffee.com">Sweet Palm Coffee</a> is our partner site and the cafe we point people to when they would rather order breakfast than cook it. Sweet Palm Coffee &amp; Food is a locally run cafe at 471 King Street in downtown Charleston, serving coffee alongside a full food menu from a walk-up counter in the middle of the Upper King shopping and dining district.</p>
+    <p>Two items on the menu line up with recipes on this site. The Sweet Palm chicken caesar wrap is the grab-and-go lunch that inspired our homemade version, and the breakfast burrito is the reason we spent a month working out how to keep scrambled eggs soft inside a tortilla. If you are in Charleston, try the originals first and then cook ours at home to compare. The cafe also serves dirty sodas and ice cream, which makes it a useful stop at any hour of a King Street afternoon.</p>
+    <p>Current hours and the full menu are on the <a href="https://sweetpalmcoffee.com">Sweet Palm Coffee website</a>.</p>
+  </div>
+</article>
+
+<article class="post">
+  <div class="post-head"><span class="cat">Food</span><span class="cat">Tips</span><h2><a href="tips.html">Ten Habits That Make Home Cooking Easier</a></h2><span class="rule"></span><div class="date">Posted on October 21, 2026</div></div>
+  <p>Most cooking problems are not recipe problems. They come from a cold pan, a crowded pan, or salt added too late to do any good. We collected the ten habits that fix the widest range of dishes, from scrambled eggs to roast chicken, and wrote each one up with the reason it works. None of them requires new equipment beyond an inexpensive thermometer.</p>
+  <div class="more-wrap"><a class="more" href="tips.html">Read the Tips</a></div>
+</article>
+
+<article class="post">
+  <div class="post-head"><span class="cat">Lifestyle</span><h2><a href="lifestyle.html">Casual Dining in Charleston, the Local Way</a></h2><span class="rule"></span><div class="date">Posted on October 14, 2026</div></div>
+  <p>Charleston has a national reputation for reservation-only dining rooms, but people who live here eat very differently during the week. They order at counters, sit at the bar, carry lunch to a park bench, and plan around the crowds instead of through them. Our lifestyle page covers how to eat well downtown without a reservation, a dress code, or a two-hour wait.</p>
+  <div class="more-wrap"><a class="more" href="lifestyle.html">Continue Reading</a></div>
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-nav">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="tips.html">Cooking Tips</a>
+    <a href="lifestyle.html">Lifestyle</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="copy">&copy; 2026 Breakfast, Brunch &amp; Dinner. All rights reserved // Charleston, SC</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
